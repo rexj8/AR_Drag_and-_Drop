@@ -1,0 +1,154 @@
+#:import C kivy.utils.get_color_from_hex
+
+<ShowQr>:
+    qr:qr
+    BoxLayout:
+        canvas.before:
+            Color:
+
+                rgba : C("#ffe268")                 #app.left_tray_color                                              #app.theme_cls.bg_normal
+            Rectangle:
+
+                pos: self.pos
+                size:self.size
+        orientation:"vertical"
+        AnchorLayout:
+            padding:[50,50,50,50]
+            size_hint:(0.3,1)
+            anchor_x :'left'
+            anchor_y :'top'
+            ImageButton:
+
+                size_hint:(None,None)
+                size:(50,50)
+                source:"images/app/back.png"
+                on_release:app.qrscreen_to_mainscreen()
+        AnchorLayout:
+            anchor_x :'center'
+            anchor_y :'center'
+            Image:
+                id:qr
+                size_hint:(None,None)
+                size:(200,200)
+
+
+                source:"qr.png"
+        BoxLayout:
+            size_hint:(0.3,1)
+
+<CameraWindow>:
+    camera:camera
+    BoxLayout:
+        orientation: 'vertical'
+        canvas.before:
+            Color:
+
+                rgba : C("#ffe268")                 #app.left_tray_color                                              #app.theme_cls.bg_normal
+            Rectangle:
+
+                pos: self.pos
+                size:self.size
+        Camera:
+            id: camera
+            resolution:(640,640)
+            play: True
+
+        Button:
+            text: 'Capture'
+            size_hint_y: None
+            height: '48dp'
+            on_press: app.capture()
+        Button:
+            text: 'Back'
+            size_hint_y: None
+            height: '48dp'
+            on_press: app.camerascreen_to_mainscreen()
+
+<MainWindow>:
+    content: content
+    BoxLayout:
+        size_hint:(0.05,1)
+        canvas.before:
+            Color:
+
+                rgba : C("#ffe268")                 #app.left_tray_color                                              #app.theme_cls.bg_normal
+            Rectangle:
+
+                pos: self.pos
+                size:self.size
+    BoxLayout:
+        orientation:"vertical"
+        BoxLayout:
+            orientation:"vertical"
+            size_hint:(1,0.2)
+
+            canvas.before:
+                Color:
+
+                    rgba : C("#ffe268")                 #app.left_tray_color                                              #app.theme_cls.bg_normal
+                Rectangle:
+
+                    pos: self.pos
+                    size:self.size
+            BoxLayout:
+            BoxLayout:
+                spacing:25
+                MDFloatingActionButton:
+                    icon: "qrcode-scan"
+                    md_bg_color: C("#5d8ebe4")
+                    on_release:app.mainscreen_to_qrscreen()
+                MDFloatingActionButton:
+                    icon: "camera"
+                    on_release: app.mainscreen_to_camerascreen()
+                    md_bg_color: C("#5d8ebe4")
+                BoxLayout:
+
+                MDIconButton:
+                    icon: "check"
+
+            BoxLayout:
+        BoxLayout:
+            orientation:"vertical"
+            canvas.before:
+                Color:
+
+                    rgba : C("#364547")                 #app.left_tray_color                                              #app.theme_cls.bg_normal
+                Rectangle:
+
+                    pos: self.pos
+                    size:self.size
+
+            Label:
+                size_hint:(1,0.2)
+
+                markup:True
+                text:"[color=#96bb7c][size=100][font=pacifico]CutandPaste[/font][/size][/color]"
+
+            Label:
+                markup:True
+                size_hint:(1,0.2)
+                text:"[color=#fad586][size=50]steps to use:[/size][/color]"
+            Label:
+                id:content
+                markup:True
+                text:""
+        BoxLayout:
+            size_hint:(1,0.05)
+            canvas.before:
+                Color:
+
+                    rgba : C("#ffe268")                 #app.left_tray_color                                              #app.theme_cls.bg_normal
+                Rectangle:
+
+                    pos: self.pos
+                    size:self.size
+    BoxLayout:
+        size_hint:(0.05,1)
+        canvas.before:
+            Color:
+
+                rgba : C("#ffe268")                 #app.left_tray_color                                              #app.theme_cls.bg_normal
+            Rectangle:
+
+                pos: self.pos
+                size:self.size
