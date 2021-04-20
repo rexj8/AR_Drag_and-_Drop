@@ -1,5 +1,9 @@
 # AR_Drag_and_Drop
 
+## Steps to consider
+![image](https://user-images.githubusercontent.com/44037733/115446958-8dbef300-a235-11eb-867c-757aee180780.png)
+
+
 ![image](https://user-images.githubusercontent.com/44037733/115445845-058c1e00-a234-11eb-8fcd-a0487cfef7e7.png)
 
 
