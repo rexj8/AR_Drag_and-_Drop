@@ -1,5 +1,9 @@
 # AR_Drag_and_Drop
-
+# Team Member
+Yash Mathur
+Vinay Kunmar
+Rachit
+Ritesh Diwedi
 ## Steps to consider
 ![image](https://user-images.githubusercontent.com/44037733/115446958-8dbef300-a235-11eb-867c-757aee180780.png)
 
