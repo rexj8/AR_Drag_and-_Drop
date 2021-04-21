@@ -1,7 +1,7 @@
 # AR_Drag_and_Drop
 # Team Member
  - Yash Mathur
- - Vinay Kunmar
+ - Vinay Kumar
  - Rachit
  - Ritesh Diwedi
 ## Steps to consider
