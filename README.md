@@ -3,7 +3,8 @@
  - Yash Mathur
  - Vinay Kumar
  - Rachit
- - Ritesh Diwedi
+ - Ritesh Dwivedi
+ - Kanhaiya Sharma
 ## Steps to consider
 ![image](https://user-images.githubusercontent.com/44037733/115446958-8dbef300-a235-11eb-867c-757aee180780.png)
 
