@@ -1,5 +1,5 @@
 import qrcode
-
+#Qr generator for connection
 class QrMake():
 
     def __init__(self):
